@@ -51,3 +51,6 @@ int main() {
 
     return 0;
 }
+
+// TC: 2^n
+// SC: n
