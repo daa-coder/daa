@@ -44,3 +44,6 @@ int main() {
 
     return 0;
 }
+
+TC : n^2.2^n
+SC: 2^n. n
