@@ -76,3 +76,6 @@ int main() {
 
     return 0;
 }
+
+// TC: O(N⋅N!)
+// SC:O(N^2 +N+N^2⋅N!)
