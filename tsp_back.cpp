@@ -75,3 +75,42 @@ int main() {
 // 20 25 30 0
 
 // The minimum cost of TSP is: 80
+
+
+// Time Complexity (TC):
+// Worst Case: O(n!) because we explore all permutations of the cities.
+// Here, 'n' is the number of cities.
+
+// Space Complexity (SC):
+// O(n) due to the visited array, which tracks the cities visited during the recursion.
+
+
+// Sample input -> 
+// Enter the number of cities: 4
+// Enter the cost matrix (enter 0 if no path exists):
+// 0 10 15 20
+// 10 0 35 25
+// 15 35 0 30
+// 20 25 30 0
+
+// The minimum cost of TSP is: 80
+
+//algorithm
+// Initialize:
+
+// Create a visited[] array to keep track of visited cities, initialized with false. Set visited[0] = true (starting city).
+// Set minCost to infinity (or a large number) to store the minimum cost of the tour.
+// Backtracking Function:
+
+// Base Case: If all cities are visited and there is a path from the current city to the starting city (i.e., a complete cycle), update minCost with the current cost.
+// Recursive Case: For each unvisited city i, if there is a path from the current city to city i, do the following:
+// Mark city i as visited.
+// Recursively visit the next city with updated cost.
+// After returning from recursion, backtrack by marking city i as unvisited.
+// Start the Tour:
+
+// Call the backtracking function starting from city 0 with count = 1 (since the first city is already visited), cost = 0.
+// Output:
+
+// If minCost is still infinity after the recursion, output "No solution exists".
+// Otherwise, print the minimum cost of the tour.
