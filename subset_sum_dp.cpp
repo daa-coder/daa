@@ -84,3 +84,28 @@ int main() {
 
 // Time Complexity : O(n * k);
 // Space Complexity : O(n * k) + O(n) ..(Auxiliary stack space :)
+
+// Time Complexity : O(n * k);
+// Space Complexity : O(n * k) + O(n) ..(Auxiliary stack space :)
+
+//algorithm
+// Recursive Backtracking:
+
+// Start at the last element of the array and explore two choices for each element:
+// Include the current element in the subset.
+// Exclude the current element from the subset.
+// If including the current element causes the sum to match the target, add that subset to the result.
+// Use backtracking to explore other subsets by undoing the inclusion of the current element.
+// Memoization:
+
+// Use a memoization table (2D array dp) to store results of subproblems (whether a particular sum can be achieved using a subset of elements up to a certain index). This avoids redundant calculations and optimizes the recursive process.
+// Base Case:
+
+// If the target sum is reached (i.e., tar == 0), the current subset is a valid solution, so it is added to the result.
+// If we reach the end of the array or have no elements left to consider, stop further exploration.
+// Backtracking:
+
+// After including an element in the subset, backtrack by removing it and continue to explore the next possibilities.
+// Termination:
+
+// If no subsets are found that sum to the target value, print a message indicating no solution.
