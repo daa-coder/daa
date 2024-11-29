@@ -82,6 +82,12 @@ int main() {
 // O(n): To store the visited cities and the current state.
 
 
+// Algorithm
+// Start at an Initial City: Select any city as the starting point (e.g., city 0).
+// Visit the Nearest Unvisited City: From the current city, choose the nearest city that hasn't been visited yet (based on minimum distance).
+// Mark the City as Visited: Add the chosen city to the tour and mark it as visited.
+// Repeat Until All Cities Are Visited: Continue the process until all cities have been visited.
+// Return to the Starting City: Once all cities are visited, return to the starting city to complete the tour.
 
 
 
