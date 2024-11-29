@@ -51,3 +51,28 @@ int main() {
 
 // Time Complexity: O(2^n)
 // Space Complexity: O(n)   recursion stack;
+
+
+// Time Complexity: O(2^n)
+// Space Complexity: O(n)   recursion stack;
+
+//algorithm
+// Input:
+
+// Read the number of items n.
+// Read the arrays wt[] (weights) and val[] (values) of size n.
+// Read the knapsack capacity w.
+// Function:
+
+// Define the recursive function backtrack(ind, bag):
+// If ind == 0, check if the weight of the first item is less than or equal to the current capacity:
+// If yes, return the value of the item.
+// If no, return 0.
+// Otherwise, calculate two possible cases:
+// Not picking the item: Recursively call backtrack(ind - 1, bag).
+// Picking the item (if it fits): Return val[ind] + backtrack(ind - 1, bag - wt[ind]).
+// Return the maximum of the two cases.
+// Result:
+
+// Call backtrack(n-1, w) to compute the maximum achievable value.
+// Output the result.
