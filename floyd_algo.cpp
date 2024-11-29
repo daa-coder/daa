@@ -83,3 +83,16 @@ int main() {
 
 // TC = O(n^3)
 // SC = O(n^2)
+
+
+// TC = o(n3)
+// SC = o(n2)
+
+//Algorithm
+//Input the number of vertices n and the adjacency matrix graph.
+// Initialize dist to graph.
+// For each intermediate vertex k (0 to n-1):
+// For each source vertex i (0 to n-1):
+// For each destination vertex j (0 to n-1):
+// Update dist[i][j] if a shorter path through k is found.
+// Print the final distance matrix.
