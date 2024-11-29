@@ -126,3 +126,16 @@ int main(){
 }
 // TC  = O(nlogn)
 // SC = O(n)
+
+
+//algorithm
+// Start with a sorted array and initialize low to 0 and high to the last index of the array.
+
+// Calculate the middle index as mid = low + (high - low) / 2.
+
+// Compare the key with the element at arr[mid]:
+
+// If arr[mid] is equal to the key, return mid.
+// If arr[mid] is greater than the key, update high to mid - 1 and search in the left sub-array.
+// If arr[mid] is less than the key, update low to mid + 1 and search in the right sub-array.
+// Repeat steps 2 and 3 until low is greater than high.
