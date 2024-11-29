@@ -55,3 +55,29 @@ int main() {
 
 // TC = O(nlogn)
 // SC = O(n)
+
+
+/ TC = O(nlogn)
+// SC = O(n)
+
+//algorithm
+// Input:
+
+// Read the number of items n.
+// Read the weight and value of each item into the arrays weight[] and values[].
+// Read the knapsack capacity w.
+// Calculate the Value-to-Weight Ratio:
+
+// For each item, compute the ratio value[i] / weight[i] and store it in a vector p as a pair (ratio, index).
+// Sort Items by Ratio:
+
+// Sort the vector p in descending order based on the ratio using the sort() function with a custom comparison (greater<pair<double, int>>).
+// Greedy Selection of Items:
+
+// Initialize the variable ans = 0 to store the total value in the knapsack.
+// For each item (sorted by value-to-weight ratio):
+// If the item can fully fit into the knapsack, add its full value to ans and reduce the remaining capacity of the knapsack.
+// If the item can't fully fit, take as much as possible (fraction of the value) and stop.
+// Output:
+
+// Print the total value ans that can be obtained with the given knapsack capacity.
