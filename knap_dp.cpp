@@ -56,3 +56,34 @@ int main() {
 
 // Time Complexity (TC): O(n * w), where n is the number of items and w is the knapsack capacity.
 // Space Complexity (SC): O(n * w), due to the storage required for the dynamic programming table.
+
+
+// Time Complexity (TC): O(n * w), where n is the number of items and w is the knapsack capacity.
+// Space Complexity (SC): O(n * w), due to the storage required for the dynamic programming table.
+
+//algorithm
+// Input:
+
+// Read the number of items n.
+// Read the array val[] (values of items) and wt[] (weights of items).
+// Read the knapsack capacity w.
+// Create the DP Table:
+
+// Initialize a 2D array dp with dimensions n x (w + 1), filled with -1 to represent uncalculated states.
+// Define the Recursive Function (memo):
+
+// If the index is 0:
+// If the item's weight is within the capacity, return its value.
+// Otherwise, return 0.
+// Otherwise:
+// Check if the result for the current state (dp[ind][bag]) is already computed, and return it if true.
+// Calculate the maximum value of:
+// Not picking the item: memo(ind - 1, val, wt, dp, bag).
+// Picking the item (if the item fits in the knapsack): val[ind] + memo(ind - 1, val, wt, dp, bag - wt[ind]).
+// Store the result in dp[ind][bag] and return it.
+// Call the Memoization Function:
+
+// Call memo(n - 1, val, wt, dp, w) to compute the maximum value achievable.
+// Output:
+
+// Print the value stored in dp[n-1][w] which is the maximum achievable value.
