@@ -54,3 +54,30 @@ int main() {
 
 // TC: 2^n
 // SC: n
+
+
+// TC: 2^n
+// SC: n
+
+//algorithm
+// Input:
+
+// The size of the set (n), and the target sum (targetSum).
+// The set of integers that need to be considered for finding subsets.
+// Recursive Backtracking Approach:
+
+// Base Case 1: If the sum of the current subset (currentSum) equals the target sum (targetSum), print the current subset.
+// Base Case 2: If the currentSum exceeds targetSum or we have considered all elements (i.e., index equals the size of the set), stop the recursion for the current path.
+// Recursive Case:
+// First, try including the current element in the subset and recurse further.
+// Then, backtrack: exclude the current element from the subset and recurse again with the updated state.
+// Backtrack:
+
+// As we explore different subsets, we backtrack by undoing the inclusion of an element and continuing the exploration of other subsets.
+// Stopping Condition:
+
+// If the current subset sum exceeds the target sum or we have exhausted all elements, we backtrack and try other possibilities.
+// Output:
+
+// If one or more valid subsets are found, display them.
+// If no valid subset is found, print a message indicating so.
