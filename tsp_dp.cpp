@@ -66,3 +66,35 @@ int main() {
 // The recursive function explores all possible cities to visit next, minimizing the travel cost. 
 // The time complexity is O(n * 2^n), where n is the number of cities, and the space complexity is also O(n * 2^n) due to the DP table storing results for each subset of cities and each city. 
 // This approach significantly reduces the complexity compared to brute force methods.
+
+
+
+// TC : n^2.2^n
+// SC: 2^n. n
+
+
+// Theory 
+// The Traveling Salesman Problem (TSP) using Dynamic Programming (DP) employs bitmasking to represent the set of visited cities and a DP table to store the minimum cost for each state (visited cities and current city). 
+// The recursive function explores all possible cities to visit next, minimizing the travel cost. 
+// The time complexity is O(n * 2^n), where n is the number of cities, and the space complexity is also O(n * 2^n) due to the DP table storing results for each subset of cities and each city. 
+// This approach significantly reduces the complexity compared to brute force methods.
+
+//algorithm
+// Initialization:
+
+// Start by initializing the DP table dp to -1, which indicates that no subproblem has been computed yet.
+// Recursive Function:
+
+// Use a recursive function tsp(mask, pos) to compute the minimum cost to visit all cities given the current mask (cities visited so far) and the current city pos.
+// Base Case:
+
+// If all cities have been visited, return the cost to return to the starting city (dist[pos][0]).
+// Exploring States:
+
+// For each unvisited city, recurse and update the DP table with the minimum travel cost.
+// Memoization:
+
+// Store the results of computed states in the dp table to avoid recomputation.
+// Final Answer:
+
+// After all recursive calls, the answer will be stored in the DP table, and we can extract the minimum cost by considering all possible ways to return to the starting city.
