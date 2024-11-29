@@ -111,3 +111,18 @@ int main() {
 
 // Time Complexity: 𝑂(𝑛log𝑛) (Best/Average), 𝑂(𝑛^2) (Worst case)
 // Space Complexity: 𝑂(log𝑛) (Best/Average), 𝑂(𝑛) (Worst case)
+
+
+
+//Merge- T C -O(n log n) and S C -O(n). 
+
+//algorithms
+//Generate a random array of integers of size n.
+// Create two copies of the array: one for Merge Sort and one for Quick Sort.
+// Perform Merge Sort:
+// Divide and merge subarrays recursively until sorted.
+// Record and calculate the time taken.
+// Perform Quick Sort:
+// Partition the array recursively based on the pivot.
+// Record and calculate the time taken.
+// Repeat the process for various array sizes and display the results.
